@@ -16,17 +16,20 @@ using namespace std;
 
 class Board {
 private:
-    int locations[9];
+    char locations[9];
+    string color[9];
+    string locationColor[9];
     void loadLocationsArray();
-    Color redColor;
-    Color blueColor;
-    Color defaultColor;
+    void loadColorArray();
     
     
 public:
     Board();
-    void reset();
     void updateDisplay();
+    bool placeMarkInlocation(char mark, int selection);
+    int checkWin();
+    void markWin();
+    void reset();
     
     
     

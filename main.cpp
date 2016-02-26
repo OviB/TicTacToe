@@ -7,13 +7,13 @@
 //
 
 #include <iostream>
-#include "Board.hpp"
+#include "GameManager.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    Board myBoard;
+    GameManager game;
     
-    myBoard.updateDisplay();
+    game.startGame();
     
     return 0;
 }

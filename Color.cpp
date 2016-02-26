@@ -12,13 +12,20 @@ Color::Color(Code pCode) : code(pCode) {
     
 }
 
+Color::Color() : code(FG_DEFAULT) {
+    
+}
+
 std::ostream & operator<<(std::ostream& os, const Color& mod) {
     return os << "\033[" << mod.code << "m";
 }
 
-void red() {
-    //code =
+const std::string Color::redColor() {
+    return "\033[;31m";
 }
-void blue() {
-    
+const std::string Color::blueColor() {
+    return "\033[;34m";
+}
+const std::string Color::defaultColor() {
+    return "\033[;39m";
 }

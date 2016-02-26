@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <ostream>
 
+
 enum Code {
     FG_RED      = 31,
     FG_GREEN    = 32,
@@ -26,10 +27,12 @@ enum Code {
 class Color {
     Code code;
 public:
+    Color();
     Color(Code pCode);
+    const std::string redColor();
+    const std::string blueColor();
+    const std::string defaultColor();
     friend std::ostream & operator<<(std::ostream& os, const Color& mod);
-    void red();
-    void blue();
 };
 
 #endif /* Color_hpp */
