@@ -7,9 +7,13 @@
 //
 
 #include <iostream>
+#include "Board.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Board myBoard;
+    
+    myBoard.updateDisplay();
+    
     return 0;
 }
